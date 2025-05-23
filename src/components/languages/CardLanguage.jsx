@@ -1,4 +1,4 @@
-// import languages from "src/data/languages.js";
+import languages from "../../data/languages";
 
 export default function CardLanguage() {
   return (

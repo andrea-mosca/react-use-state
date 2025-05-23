@@ -9,7 +9,7 @@ export default function LanguagesBtnList({ onSelectLanguage }) {
             <button
               type="button"
               className="btn btn-primary"
-              onClick={() => onSelectLanguage(language.title)}
+              onClick={() => onSelectLanguage(language)}
             >
               {language.title}
             </button>

@@ -1,37 +1,20 @@
-export default function LanguagesBtnList() {
+import languages from "../../data/languages";
+
+export default function LanguagesBtnList({ onSelectLanguage }) {
   return (
     <div className="container py-5">
-      <ul className="d-flex gap-2">
-        <li>
-          <button type="button" class="btn btn-primary">
-            HTML
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-primary">
-            CSS
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-primary">
-            JAVASCRIPT
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-primary">
-            Node.js
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-primary">
-            Express
-          </button>
-        </li>
-        <li>
-          <button type="button" class="btn btn-primary">
-            ReactJS
-          </button>
-        </li>
+      <ul className="d-flex gap-2 flex-wrap">
+        {languages.map((language) => (
+          <li key={language.id}>
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => onSelectLanguage(language.title)}
+            >
+              {language.title}
+            </button>
+          </li>
+        ))}
       </ul>
     </div>
   );

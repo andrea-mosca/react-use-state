@@ -1,0 +1,16 @@
+*{
+  font-family: 'Open Sans';
+}
+
+a{
+    text-decoration: none !important;
+    color: gray !important;
+}
+ul{
+    list-style-type: none;
+    padding: 0 !important;
+}
+header {
+    background-color: lightgray;
+    color: black;
+}

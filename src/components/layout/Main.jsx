@@ -7,7 +7,10 @@ export default function Main() {
 
   return (
     <main>
-      <LanguagesBtnList onSelectLanguage={setSelectedLanguage} />
+      <LanguagesBtnList
+        onSelectLanguage={setSelectedLanguage}
+        selectedLanguage={selectedLanguage}
+      />
 
       {selectedLanguage ? (
         <CardLanguage language={selectedLanguage} />
